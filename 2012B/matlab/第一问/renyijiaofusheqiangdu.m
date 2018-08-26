@@ -34,5 +34,6 @@ Hb = H0(:,1)-H0(:,2);
 if abs(aa)<=abs(D)
     s = Rb*Hb+Rs*Hd;
 else
+    aaa = 1;
     s = Rs*Hd;
 end

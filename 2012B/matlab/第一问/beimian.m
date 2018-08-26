@@ -1,6 +1,15 @@
 for i = 1:365
-    HD(i,1) = rizongfusheqiangdu(H00,i,pi,1.042);
+    a = 0;
+    for j = 1:24
+        a = a+beimian1((i-1)*24+j,1);
+    end
+    HD(i,1) = a;
 end
+
 for i = 1:12
-    HM(i,1) = yuezongfusheqiangdu(H00,i,pi,1.042);
+    a = 0;
+    for j = startday(i):endday(i)
+        a = a + HD(j,1);
+    end
+    HM(i,1) = a;
 end
